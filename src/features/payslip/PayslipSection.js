@@ -1,3 +1,4 @@
+
 import React from 'react';
 import IncomeForm from './IncomeForm';
 import DeductionForm from './DeductionForm';
@@ -20,23 +21,26 @@ const PayslipSection = ({
           </div>
         </div>
 
-        {/* ส่วนฟอร์มรายได้ */}
+        {/* Income Section */}
         <IncomeForm
           formData={formData}
           handleChange={handleChange}
           totalIncome={totalIncome}
         />
 
-        {/* ส่วนฟอร์มรายการหัก */}
+        {/* Deductions Section */}
         <DeductionForm
           formData={formData}
           handleChange={handleChange}
           totalDeduction={totalDeduction}
         />
 
-        {/* ส่วนสรุปยอด */}
-        <Summary formData={formData} netIncome={netIncome} />
-        
+        {/* Summary Section (นี่คือเวอร์ชันที่แก้ไขแล้ว) */}
+        <Summary 
+          formData={formData} 
+          netIncome={netIncome} 
+        />
+            
       </div>
     </div>
   );
